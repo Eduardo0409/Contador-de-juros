@@ -11,7 +11,21 @@ import { FormsModule } from '@angular/forms';
   templateUrl: `./main.html`,
 })
 export class App {
-  name = 'Angular';
-}
+  value: number;
+  rate: number;
+  months: number;
 
+
+  getInterests(){
+    return this.value *
+    (1 + this.rate * this.months);
+  }
+
+
+  constructor(){
+    this.value = 0;
+    this.rate = 0;
+    this.months = 0;
+  }
+}
 bootstrapApplication(App);

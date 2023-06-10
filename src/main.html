@@ -1,0 +1,9 @@
+<h1>Interests Calc</h1>
+<div>Value:</div>
+<input type="number" step="0,01" [(ngModel)]="value"/>
+<div>Interests rate:</div>
+<input type="number" step="0,01"  [(ngModel)]="rate"/>
+<div>Months:</div>
+<input type="number"  [(ngModel)]="months"/>
+<hr />
+<div> {{ getInterests() | currency }}</div> 
